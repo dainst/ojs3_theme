@@ -29,7 +29,7 @@
 			<a href="#pkp_content_nav">{translate key="navigation.skip.nav"}</a>
 			<a href="#pkp_content_footer">{translate key="navigation.skip.footer"}</a>
 		</div>
-		
+
 		<div class="pkp_structure_page">
 
 		{* Header *}
@@ -39,11 +39,11 @@
 					<div class="idai_world_nav_wrapper">
 						<div class="idai_world_nav">
 							<img class="idai_world_nav_logo" src="{$baseUrl}/public/idai/kleinergreif.png"/>
-							<iframe src="https://idai.world/config/idai-nav.html" frameborder="0"></iframe>	
+							<iframe src="https://idai.world/config/idai-nav.html" frameborder="0"></iframe>
 						</div>
 
 						<div class="idai_world_logo_wrapper">
-							<a href="https://www.idai.world/what/publications"><img class="idai_world_logo" src="{$baseUrl}/public/idai/idai_logo.png"/></a>
+							<a href="{$baseUrl}"><img class="idai_world_logo" src="{$baseUrl}/public/idai/idai_logo.png"/></a>
 						</div>
 
 						<div class="idai_language_switch_wrapper">
@@ -63,7 +63,7 @@
 					<div class="pkp_site_name_wrapper">
 						{* Logo or site title. Only use <h1> heading on the homepage.
 						Otherwise that should go to the page title. *}
-						
+
 						{if $displayPageHeaderLogo}
 							<img class="dai_hero_img" src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
 						{/if}
@@ -123,7 +123,7 @@
 							</div>
 						</nav>
 					{/if}
-					
+
 					<nav class="pkp_navigation_user_wrapper" id="navigationUserWrapper" aria-label="{translate|escape key="common.navigation.user"}">
 						{load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user" liClass="profile"}
 					</nav>
