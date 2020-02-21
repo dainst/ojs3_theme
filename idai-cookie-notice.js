@@ -1,0 +1,1 @@
+../../../node_modules/idai-cookie-notice/idai-cookie-notice.js

@@ -42,5 +42,6 @@
 {load_script context="frontend"}
 
 {call_hook name="Templates::Common::Footer::PageFooter"}
+<script src="https://publications.dainst.org/journals/plugins/themes/idaitheme/idai-cookie-notice.js" type="text/javascript"></script>
 </body>
 </html>
