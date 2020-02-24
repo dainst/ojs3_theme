@@ -91,7 +91,7 @@
 					{translate key="journal.currentIssue"}
 				</h2>
 				<div class="current_issue_title">
-					<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more"> {* added <a></a> tags around original Hook *}
+					<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}" class="read_more"> {* added <a></a> tags around original Hook *}
 						{$issue->getIssueIdentification()|strip_unsafe_html}
 					</a>
 				</div>
