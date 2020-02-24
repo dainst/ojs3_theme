@@ -87,6 +87,9 @@
 	{if $issue}
 		{if $homepageImage}
 			<div class="current_issue dai_has_image">
+    {else}
+      <div class="current_issue" style="">
+    {/if}
 				<h2>
 					{translate key="journal.currentIssue"}
 				</h2>
@@ -100,23 +103,6 @@
 					{translate key="journal.viewAllIssues"}
 				</a>
 			</div>
-
-		{else}
-			<div class="current_issue" style="">
-				<h2>
-					{translate key="journal.currentIssue"}
-				</h2>
-				<div class="current_issue_title">
-					<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more"> {* added <a></a> tags around original Hook *}
-						{$issue->getIssueIdentification()|strip_unsafe_html}
-					</a>
-				</div>
-				{include file="frontend/objects/issue_toc.tpl"}
-				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
-					{translate key="journal.viewAllIssues"}
-				</a>
-			</div>
-		{/if}
 	{/if}
 
 	{* Additional Homepage Content *}
