@@ -46,8 +46,12 @@
 							<a href="{$baseUrl}"><img class="idai_world_logo" src="{$baseUrl}/public/idai/idai_logo.png"/></a>
 						</div>
 
+						<div class="idai_books_wrapper">
+							<a href="https://publications.dainst.org/books" target="_blank">Books <span class="fa fa-external-link"></span></a>
+						</div>
+
 						<div class="idai_language_switch_wrapper">
-							<span>{translate key="common.language"}</span>
+							<span>{translate key="common.language"} <span class="fa fa-globe" aria-hidden="true"></span>
 							<ul class="idai_language_switch">
 								{foreach from=$languageToggleLocales item=localeName key=localeKey}
 									<li class="locale_{$localeKey|escape}{if $localeKey == $currentLocale} current{/if}" lang="{$localeKey|escape}">
