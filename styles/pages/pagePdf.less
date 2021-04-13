@@ -117,7 +117,6 @@
 		.title,
 		.download {
 			position: absolute;
-
 			margin-top: auto;
 			margin-bottom: auto;
 		}
@@ -141,6 +140,7 @@
 	}
 
 	.galley_view#pdfCanvasContainer {
+	  	height: 99vh;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -151,7 +151,7 @@
 		iframe {
 			width: 100%;
 			height: 100%;
-			padding-top: @DAIspacing_quadruple;
+		  	padding-top: 0 !important;  /* padding-top: @DAIspacing_quadruple; */
 			border: none;
 		}
 	}

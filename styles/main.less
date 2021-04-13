@@ -209,6 +209,7 @@
     visibility: visible;
     opacity: 1;
     transition: visibility 0.4s, opacity 0.4s;
+    cursor: pointer;
 }
 
 .pkp_navigation_primary>li>ul {
@@ -333,7 +334,8 @@
         background-color: @DAIcolor_greyDark;
 
         a {
-            color: @DAIcolor_greyBright;
+		  text-decoration: none;
+		  color: #a9a8a4;
         }
     }
 }
@@ -359,6 +361,13 @@
 	margin-bottom: auto;
 	flex: 0 0 auto;
   }
+
+  >a:hover {
+	text-decoration: none;
+	color: #a9a8a4;
+	cursor: pointer;
+  }
+
 }
 
 //
@@ -381,13 +390,18 @@
         margin-bottom: auto;
         flex: 0 0 auto;
     }
+	>span:hover {
+	  text-decoration: none;
+	  color: #a9a8a4;
+	  cursor: pointer;
+	}
 
     ul.idai_language_switch {
         background-color: @DAIcolor_greyMedium;
         position: absolute;
         top: @DAIspacing_quadruple * 4;
         left: 0;
-        width: 100% / @DAIgrid_columns * 3;
+        width: 20%;
         height: @DAIgrid_hero;
         margin: 0;
         padding: 0;
@@ -398,10 +412,8 @@
         >li {
             //width: 100%;
             padding-left: @DAIspacing_double;
-            padding-bottom: @DAIspacing_quadruple - @DAIspacing_half;
-
-            font-size: @DAIspacing_triple;
-
+            padding-bottom: 0.2vh;
+            font-size: 0.8em;
 
             a {
                 color: @DAIcolor_greyDark;

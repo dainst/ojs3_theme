@@ -29,8 +29,8 @@
     }
 
     .login {
-        grid-column-start: 4;
-        grid-column-end: @DAIgrid_columns - 2;
+        grid-column-start: 3;
+        grid-column-end: 11;
 
         margin: @DAIspacing_quadruple 0 (@DAIspacing_quadruple * 2) 0;
 
@@ -40,10 +40,11 @@
             grid-auto-rows: minmax(min-content, max-content);
 
             padding: @DAIspacing_quadruple 0;
+		    border: 1px solid #949494;
 
             >div {
-                grid-column-start: 2;
-                grid-column-end: 6;
+                grid-column-start: 1;
+                grid-column-end: 7;
 
                 display: flex;
                 flex-direction: row;
