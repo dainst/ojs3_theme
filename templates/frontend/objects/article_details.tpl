@@ -108,17 +108,17 @@
 							<span class="name">
 								{$author->getFullName()|escape}
 							</span>
+							{if $author->getLocalizedAffiliation()}
+								<span class="affiliation">
+									{$author->getLocalizedAffiliation()|escape}
+								</span>
+							{/if}
 							{if $author->getOrcid()}
 								<span class="orcid">
 									{$orcidIcon}
 									<a href="{$author->getOrcid()|escape}" target="_blank">
 										{$author->getOrcid()|escape}
 									</a>
-								</span>
-							{/if}
-							{if $author->getLocalizedAffiliation()}
-								<span class="affiliation">
-									{$author->getLocalizedAffiliation()|escape}
 								</span>
 							{/if}
 						</li>
