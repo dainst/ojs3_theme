@@ -10,106 +10,155 @@
 
 .page_article {
 
-    grid-column-start: 1;
-    grid-column-end: @DAIgrid_columns + 1;
+  grid-column-start: 1;
+  grid-column-end: @DAIgrid_columns + 1;
 
-    display: grid;
-    grid-template-columns: repeat(@DAIgrid_columns, 100% / @DAIgrid_columns);
-    grid-auto-rows: minmax(min-content, max-content);
+  display: grid;
+  grid-template-columns: repeat(@DAIgrid_columns, 100% / @DAIgrid_columns);
+  grid-auto-rows: minmax(min-content, max-content);
 
-    .cmp_breadcrumbs {
-        .makeBreadcrumbs();
-    }
+  .cmp_breadcrumbs {
+	.makeBreadcrumbs();
+  }
 
-    .obj_article_details,
-    .row {
-        display: contents;
-    }
+  .obj_article_details,
+  .row {
+	display: contents;
+  }
 
-    h1.page_title {
-        grid-column-start: 3;
-        grid-column-end: @DAIgrid_columns - 1;
+  h1.page_title {
+	grid-column-start: 2;
+	grid-column-end: 12;
+	text-align: left;
+	padding-bottom: 0.2vh;
+	margin-bottom: 2vh;
+	color: #557ebb;
+	border-bottom: 2px dotted #557ebb;
 
-        .makeSeparatorHeadline();
+	.makeSeparatorHeadline();
 
-    }
+  }
 
-    h2.subtitle {
-        grid-column-start: 3;
-        grid-column-end: @DAIgrid_columns - 3;
+  h2.subtitle {
+	grid-column-start: 2;
+	grid-column-end: 12;
 
-        text-align: left;
-        padding-top: @DAIspacing_double;
+	text-align: left;
+	padding-top: @DAIspacing_double;
 
-        color: @DAIcolor_greyDark;
-    }
+	color: @DAIcolor_greyDark;
+  }
 
-    .main_entry {
-        grid-column-start: 3;
-        grid-column-end: @DAIgrid_columns - 3;
+  .main_entry {
+	grid-column-start: 2;
+	grid-column-end: 8;
 
-        margin-top: @DAIspacing_quadruple;
-        padding-right: @DAIspacing_quadruple;
+	margin-top: 0.5vh;
+	padding-right: @DAIspacing_quadruple;
 
-        .authors {
-            display: inline-block;
+	.item {
+	  margin: 1vh 0;
+	}
 
-            li {
-                font-size: @DAIfonts_baseLarge;
-            }
-        }
+	.label {
+	  font-size: 1em;
+	  color: #605e59;
+	  text-align: left;
+	}
 
-        .abstract h3 {
-            text-align: left;
-            color: @DAIcolor_greyDark;
-        }
-    }
+	.doi {
+	  margin-bottom: 5vh;
+	}
 
-    .entry_details {
-        grid-column-start: @DAIgrid_columns - 3;
-        grid-column-end: @DAIgrid_columns - 1;
+	.authors {
 
-        margin-top: @DAIspacing_quadruple;
+	  .name {
+		margin-bottom: 0;
+	  }
 
-        width: 100%;
+	  .orcid {
+		display: block;
+		font-size: 0.8em;
 
-        div {
-            width: 100%;
-            overflow: hidden;
+		&:before {
+		  content:url('//orcid.org/sites/default/files/images/orcid_16x16.png');
+		  display: inline-block;
+		  margin-right: 0.25em;
+		  vertical-align: middle;
+		}
+	  }
+	}
 
-        }
+	  .abstract {
 
-        div.galleys>ul.galleys_links {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-content: flex-start;
+		  p {
+			text-align: justify;
+		  }
+	  }
 
-            >li {
-                margin: @DAIspacing_quadruple 0 @DAIspacing_double 0;
-                //display: block;
-                margin-right: @DAIspacing_double;
-                flex: 0 0 auto;
+  }
 
-                >a {
-                    .makeButton();
-                }
+  .entry_details {
+	grid-column-start: 8;
+	grid-column-end: 12;
 
-                >a:hover {
-                    .makeButtonHover();
-                }
-            }
-        }
+	margin-top: @DAIspacing_quadruple;
 
-        .cover_image .sub_item a {
-            max-width: 100%;
+	width: 100%;
 
-            img {
-                max-width: 100%;
-            }
-        }
-    }
+	.label {
+	  font-size: 1em;
+	}
 
-    padding-bottom: @DAIspacing_quadruple * 2;
+	.value {
+	  font-size: 0.9em;
+	  color: #605e59;
+	}
+
+	.item {
+	  margin: 1vh 0;
+	}
+
+	.sub_item {
+	  margin: 0.5vh 0;
+	}
+
+	div {
+	  width: 100%;
+	  overflow: hidden;
+	}
+
+	div.galleys>ul.galleys_links {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: flex-start;
+	  align-content: flex-start;
+
+	  >li {
+		margin: @DAIspacing_quadruple 0 @DAIspacing_double 0;
+		//display: block;
+		margin-right: @DAIspacing_double;
+		flex: 0 0 auto;
+
+		>a {
+		  .makeButton();
+		}
+
+		>a:hover {
+		  .makeButtonHover();
+		}
+	  }
+	}
+
+	.cover_image .sub_item a {
+	  max-width: 100%;
+
+	  img {
+		max-width: 100%;
+	  }
+	}
+  }
+
+  padding-bottom: @DAIspacing_quadruple * 2;
 }
