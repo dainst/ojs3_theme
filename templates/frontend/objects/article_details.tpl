@@ -147,7 +147,7 @@
 			{if $article->getLocalizedAbstract()}
 				<div class="item abstract">
 					<span class="label">{translate key="article.abstract"}</span>
-					{$article->getLocalizedAbstract()|strip_unsafe_html}
+					{$article->getLocalizedAbstract()}
 				</div>
 			{/if}
 
