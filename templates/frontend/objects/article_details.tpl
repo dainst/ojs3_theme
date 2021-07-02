@@ -212,7 +212,7 @@
 
 		<div class="entry_details">
 
-			{* Article/Issue cover image *}
+			{* Article/Issue cover image
 			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
 				<div class="item cover_image">
 					<div class="sub_item">
@@ -226,6 +226,7 @@
 					</div>
 				</div>
 			{/if}
+			*}
 
 			{* Article Galleys *}
 			{if $primaryGalleys}
